@@ -5,4 +5,4 @@
 /dubbo-sdk/target/
 /spring-consumer/target/
 /spring-provider/target/
-.idea
+/.idea
