@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-consumer" />
+        <module name="dubbo-provider" />
+        <module name="spring-provider" />
+        <module name="sprint-boot-provider" />
+        <module name="dubbo-demo" />
+        <module name="dubbo-consumer" />
+        <module name="dubbo-sdk" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="sprint-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sprint-boot-provider" options="-parameters" />
+      <module name="sprint-provider" options="" />
+    </option>
+  </component>
+</project>

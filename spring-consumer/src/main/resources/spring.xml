@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--注册中心-->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
+    <dubbo:application name="spring-consumer"/>
+
+    <!-- 关闭所有服务启动时检查 -->
+    <dubbo:consumer check="false"/>
+
+    <!--
+    check: 默认检查服务是否可用，false：不可用时不抛异常，只有服务不存在时抛异常
+    -->
+    <dubbo:reference id="greetingService"
+                     interface="com.hongguo.dubbo.provider.GreetingService" retries="2"/>
+
+</beans>
