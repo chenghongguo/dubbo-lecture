@@ -12,7 +12,6 @@ public class MainProvider {
                 new ClassPathXmlApplicationContext("classpath:spring.xml");
         context.start();
         System.out.println("started------");
-
         System.in.read();
     }
 }
