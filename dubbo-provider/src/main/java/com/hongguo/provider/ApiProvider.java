@@ -3,6 +3,7 @@ package com.hongguo.provider;
 import com.hongguo.dubbo.provider.GreetingService;
 import com.hongguo.provider.impl.GreetingServiceImpl;
 import org.apache.dubbo.config.ApplicationConfig;
+import org.apache.dubbo.config.ProtocolConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.ServiceConfig;
 
@@ -14,6 +15,10 @@ public class ApiProvider {
     public static void main(String[] args) throws Exception {
         // 创建ServiceConfig实例
         ServiceConfig<GreetingService> serviceConfig = new ServiceConfig<>();
+        ProtocolConfig protocolConfig = new ProtocolConfig();
+        protocolConfig.setPort(20881);
+        protocolConfig.setName("dubbo");
+        serviceConfig.setProtocol(protocolConfig);
         // 设置应用程序配置
         serviceConfig.setApplication(new ApplicationConfig("first-dubbo-provider"));
         // 设置注册中心
