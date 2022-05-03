@@ -16,6 +16,7 @@
         <module>spring-provider</module>
         <module>spring-consumer</module>
         <module>jdk-spi-lecture</module>
+        <module>dubbo-spi-lecture</module>
     </modules>
 
     <name>dubbo-lecture</name>
